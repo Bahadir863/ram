@@ -1,0 +1,89 @@
+/* MultiSelectAutocomplete.css */
+
+/* Container styles */
+.multi-select-autocomplete {
+  position: relative;
+  width: 300px;
+  margin: 20px;
+}
+
+/* Input styles */
+.multi-select-autocomplete input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Suggestions container */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 2000px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Suggestion item */
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #f4f4f4;
+}
+
+/* Selected items container */
+.selected-characters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Selected item */
+.selected-character {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.selected-character:hover {
+  background-color: #0056b3;
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Error state */
+.error {
+  color: red;
+  text-align: center;
+  padding: 10px;
+}
+
+.suggestion-image {
+  width: 40px; /* veya istediğiniz genişlik değeri */
+  height: 40px; /* veya istediğiniz yükseklik değeri */
+  margin-right: 10px; /* resimler arasındaki boşluğu ayarlamak için */
+  border-radius: 50%; /* resmin kenarlarını yuvarlamak için, isteğe bağlı */
+  object-fit: cover; /* resmin orantılı bir şekilde sığmasını sağlamak için */
+}
